@@ -11,14 +11,13 @@ function App() {
   const [filter, setFilter] = useState();
 
 
-
     useEffect(() => {
     fetch('http://localhost:8080/data')
         .then((response)=> {
           return response.json();
         })
         .then((data) => {
-          // console.log(data.data);
+          console.log(data);
           setItemData(data.data);
           setAllItemData(data.data)
               });

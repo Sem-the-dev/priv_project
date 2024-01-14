@@ -10,7 +10,7 @@ Using Slim Framework 4
 ### Usage 
 To run the application in development, you can run these commands 
 
-cd into `priv_project`
+cd into `priv_project/server`
 `composer start`
 
 After that, open `http://localhost:8080` in your browser.

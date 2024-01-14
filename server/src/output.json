@@ -1,0 +1,128 @@
+[
+    {
+        "id": "1",
+        "name": "Atlantis",
+        "discount_percentage": "20",
+        "image": "https:\/\/www.hotelnewsme.com\/wp-content\/uploads\/2023\/09\/Corporate_Qatar_Press_Release-1536x768.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Oceanview Resort",
+        "discount_percentage": "20",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/643832ddeb5e6353d4f7f22a_The%20Edition_2400x1600_10%20copy.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Sunset Inn & Suites",
+        "discount_percentage": "10",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/625ffe83a70430096e7ebbcd_Beach.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Mountain Retreat Hotel",
+        "discount_percentage": "15",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/6480802d937331e523a68c03_Erth-43.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Palm Paradise Resort",
+        "discount_percentage": "20",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/6190acaf7830bf107280a571_Shangri-La_Abu-Dhabi_Beach.jpg"
+    },
+    {
+        "id": "6",
+        "name": "Golden Sands Hotel",
+        "discount_percentage": "20",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/6454927a62aa3d16219e6a9a_2400x1600_Yas%20Beach_08.png"
+    },
+    {
+        "id": "7",
+        "name": "Riverside Lodge",
+        "discount_percentage": "15",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/64798d937c2d59b264b69362_Address%20Skyview_2400x1600_06%20copy.jpg"
+    },
+    {
+        "id": "8",
+        "name": "Starlight Hotel & Spa",
+        "discount_percentage": "20",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/63c135a7b5d99fd45fb81585_DXBPJHI_3030%20copy.jpg"
+    },
+    {
+        "id": "9",
+        "name": "Blue Horizon Resort",
+        "discount_percentage": "10",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/643f821bdf56f241fdff0d98_Sofitel_06.09.21%20(3%20of%2033)%20copy.jpg"
+    },
+    {
+        "id": "10",
+        "name": "Whispering Pines Inn",
+        "discount_percentage": "10",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/6225bae2bdb3c9d75a0d00d0_6A374BEE-D147-4847-8D77-BDBCF99419D6%20copy.jpg"
+    },
+    {
+        "id": "11",
+        "name": "Emerald Bay Hotel",
+        "discount_percentage": "20",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/60c9d92801e4fc49f0140419_Privilee_SC_Couples%20(3%20of%2050)%20copy.jpg"
+    },
+    {
+        "id": "12",
+        "name": "Sunflower Suites",
+        "discount_percentage": "15",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/642bf2a8d025df2d503c7349_Doubletree%20by%20Hilton%20Al%20Marjan_11_2400x1600%20copy.jpeg"
+    },
+    {
+        "id": "13",
+        "name": "Moonlight Manor",
+        "discount_percentage": "10",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/6346b821c2947d5a563b55a2_Movenpick-RAK_Resort_topshot2.jpg"
+    },
+    {
+        "id": "14",
+        "name": "Serenity Inn & Spa",
+        "discount_percentage": "20",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/643832ddeb5e6353d4f7f22a_The%20Edition_2400x1600_10%20copy.jpg"
+    },
+    {
+        "id": "15",
+        "name": "Cascade Falls Lodge",
+        "discount_percentage": "15",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/625ffe83a70430096e7ebbcd_Beach.jpg"
+    },
+    {
+        "id": "16",
+        "name": "Harborview Hotel",
+        "discount_percentage": "20",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/6480802d937331e523a68c03_Erth-43.jpg"
+    },
+    {
+        "id": "17",
+        "name": "Lakeside Retreat",
+        "discount_percentage": "10",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/6190acaf7830bf107280a571_Shangri-La_Abu-Dhabi_Beach.jpg"
+    },
+    {
+        "id": "18",
+        "name": "Pinecrest Inn",
+        "discount_percentage": "20",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/6454927a62aa3d16219e6a9a_2400x1600_Yas%20Beach_08.png"
+    },
+    {
+        "id": "19",
+        "name": "Silver Moon Hotel",
+        "discount_percentage": "15",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/64798d937c2d59b264b69362_Address%20Skyview_2400x1600_06%20copy.jpg"
+    },
+    {
+        "id": "20",
+        "name": "Coral Cove Resort",
+        "discount_percentage": "15",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/643f821bdf56f241fdff0d98_Sofitel_06.09.21%20(3%20of%2033)%20copy.jpg"
+    },
+    {
+        "id": "21",
+        "name": "Wilderness Lodge",
+        "discount_percentage": "20",
+        "image": "https:\/\/assets-global.website-files.com\/5de35b5783c9d790ffea68ae\/6225bae2bdb3c9d75a0d00d0_6A374BEE-D147-4847-8D77-BDBCF99419D6%20copy.jpg"
+    }
+]
