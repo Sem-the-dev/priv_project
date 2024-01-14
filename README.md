@@ -1,6 +1,7 @@
-# privilee project
+# Privilee exercise 🏊🏋️‍♀️
 
 ## Backend
+Built using PHP and Slim
 
 ### Installation 
 PHP version 8.3.1 
@@ -29,6 +30,8 @@ http://localhost:8080/data/{discount}
 ### CSV Converter
 `cd src` `php CsvConverter.php your_csv_file`
 
+
+
 ## Frontend
 Built using ReactJS
 
@@ -38,7 +41,6 @@ Node version 18.12.1
 cd into `priv_project/client` 
 `npm install`
 
-
 ### Usage 
 
 To run the application in development, you can run these commands 
@@ -47,7 +49,6 @@ cd into `priv_project/client`
 `npm start`
 
 After that, open `http://localhost:3002` in your browser.
-
 
 ## Future features
 --> Filterable by both discount percentage and name at the same time
