@@ -8,6 +8,7 @@ function App() {
   const [allItemData, setAllItemData] = useState([]);
   const [discount, setDiscount] = useState(null)
   const [dropdownValue, setDropdownValue] = useState([])
+  const [filter, setFilter] = useState();
 
 
 
@@ -37,15 +38,12 @@ function App() {
 
     const handleDropdownChange = (event) => {
         const selectedHotel = event.target.value;
-        console.log(selectedHotel)
         setDropdownValue(selectedHotel)
-
 
         if (selectedHotel === 'All') {
             setItemData(allItemData);
         } else {
             const theSelectedHotelInfo = allItemData.filter(item => item.name === selectedHotel);
-            console.log(theSelectedHotelInfo);
             setItemData(theSelectedHotelInfo);
         }
     }
@@ -56,6 +54,22 @@ function App() {
         <h1>Welcome</h1>
           <div>
               <form>
+
+              <div>
+                  <span>Filter by: </span>
+
+                  <label>
+                      <input type="radio" value="discount" checked={filter === 'discount'} onChange={() => setFilter('discount')} />
+                      Discount
+                  </label>
+                  <label >
+                      <input type="radio" value="name" checked={filter === 'name' } onChange={() => setFilter('name')} />
+                      Hotel name
+                  </label>
+              </div>
+
+              <br/>
+              {filter === 'discount' ? (
               <div>
                   <label>
                       <input type="radio" value="all" defaultChecked={true} checked={discount === 'all'} onChange={handleChange} />
@@ -76,7 +90,7 @@ function App() {
                       20%
                   </label>
               </div>
-
+              ) : (
               <div>
                   <br/>
                   <select value={dropdownValue} onChange={handleDropdownChange} >
@@ -86,6 +100,7 @@ function App() {
                       ))}
                   </select>
               </div>
+              )}
               </form>
           </div>
 
