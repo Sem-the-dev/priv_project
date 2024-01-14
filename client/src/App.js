@@ -5,9 +5,11 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function App() {
   const [itemData, setItemData] = useState([]);
+  const [allItemData, setAllItemData] = useState([]);
+  const [discount, setDiscount] = useState(null)
 
 
-  useEffect(() => {
+    useEffect(() => {
     fetch('http://localhost:8080/data')
         .then((response)=> {
           return response.json();
@@ -15,14 +17,51 @@ function App() {
         .then((data) => {
           // console.log(data.data);
           setItemData(data.data);
-
+          setAllItemData(data.data)
               });
   }, []);
+
+    const handleChange = (event) => {
+        const selectedDiscount = event.target.value;
+        setDiscount(selectedDiscount)
+
+        if (selectedDiscount === 'all') {
+            setItemData(allItemData)
+        } else {
+            const filteredItems = allItemData.filter(item => item.discount_percentage === selectedDiscount);
+            setItemData(filteredItems);
+        }
+    }
 
     return (
     <div className="App">
       <header className="App-header">
         <h1>Welcome</h1>
+          <div>
+              <form>
+              <div>
+                  <label>
+                      <input type="radio" value="all" defaultChecked={true} checked={discount === 'all'} onChange={handleChange} />
+                      All
+                  </label>
+                  <label >
+                      <input type="radio" value="10" checked={discount === '10' } onChange={handleChange} />
+                      10%
+                  </label>
+
+                  <label >
+                      <input type="radio" value="15" checked={discount === '15'} onChange={handleChange} />
+                      15%
+                  </label>
+
+                  <label >
+                      <input type="radio" value="20" checked={discount === '20'} onChange={handleChange} />
+                      20%
+                  </label>
+              </div>
+              </form>
+          </div>
+
           <Carousel>
               {itemData.map((item) => (
                   <div key={item.id}>
