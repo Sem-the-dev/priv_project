@@ -39,7 +39,8 @@ return function (App $app) {
         }
     });
 
-    $app->get('/data/{name}', function ( Request $request, Response $response, array $args) {
+
+    $app->get('/data/{param}', function ( Request $request, Response $response, array $args) {
         // JSON file path
         $jsonFilePath = __DIR__ . '/../src/output.json';
 
@@ -50,17 +51,32 @@ return function (App $app) {
 
             // Decode JSON data
             $data = json_decode($jsonData, true);
-            $name = $args['name'];
+            $param = $args['param'];
 
-            $filteredHotels = array_filter($data, function ($hotel) use ($name) {
-                return $hotel['name'] === $name;
-            });
+            $foundHotel = null;
 
-//            $response->getBody()->write("Hello, $name");
+            if (is_numeric($param)) {
+                $filteredHotels = array_filter($data, function ($hotel) use ($param) {
+                    return $hotel['discount_percentage'] == $param;
+                    $foundHotel = array($filteredHotels);
+                });
+                $response->getBody()->write(json_encode([
+                    'success' => true,
+                    'discount_percentage' => $filteredHotels
+                ]));
+
+            } else {
+                foreach ($data as $hotel) {
+                    if ($hotel['name'] === $param) {
+                        $foundHotel = $hotel;
+                        break;
+                    }
+                }
+            }
+
             $response->getBody()->write(json_encode([
                 'success' => true,
                 'data' => $foundHotel
-
             ]));
 
             return $response->withHeader('Content-Type', 'application/json');
