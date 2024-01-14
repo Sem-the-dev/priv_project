@@ -7,6 +7,8 @@ function App() {
   const [itemData, setItemData] = useState([]);
   const [allItemData, setAllItemData] = useState([]);
   const [discount, setDiscount] = useState(null)
+  const [dropdownValue, setDropdownValue] = useState([])
+
 
 
     useEffect(() => {
@@ -30,6 +32,21 @@ function App() {
         } else {
             const filteredItems = allItemData.filter(item => item.discount_percentage === selectedDiscount);
             setItemData(filteredItems);
+        }
+    }
+
+    const handleDropdownChange = (event) => {
+        const selectedHotel = event.target.value;
+        console.log(selectedHotel)
+        setDropdownValue(selectedHotel)
+
+
+        if (selectedHotel === 'All') {
+            setItemData(allItemData);
+        } else {
+            const theSelectedHotelInfo = allItemData.filter(item => item.name === selectedHotel);
+            console.log(theSelectedHotelInfo);
+            setItemData(theSelectedHotelInfo);
         }
     }
 
@@ -58,6 +75,16 @@ function App() {
                       <input type="radio" value="20" checked={discount === '20'} onChange={handleChange} />
                       20%
                   </label>
+              </div>
+
+              <div>
+                  <br/>
+                  <select value={dropdownValue} onChange={handleDropdownChange} >
+                      <option defaultValue='All'>All</option>
+                      {allItemData.map((item) => (
+                          <option key={item.id} value={item.name} name={item.name}>{item.name}</option>
+                      ))}
+                  </select>
               </div>
               </form>
           </div>
