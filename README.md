@@ -50,7 +50,7 @@ cd into `priv_project/client`
 
 After that, open `http://localhost:3002` in your browser.
 
-## Future features
+## Future features 
 --> Filterable by both discount percentage and name at the same time
 
 --> Still displays rest of the hotels when filtered by name 
@@ -58,4 +58,6 @@ After that, open `http://localhost:3002` in your browser.
 --> Filterable using api endpoints
 
 --> Uses xml output too 
+
+--> Remove react-responive-carousel as it has bugs 🐛
 
