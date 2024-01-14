@@ -1,19 +1,6 @@
 <?php
 
 // Convert CSV to JSON
-//function csvJson($inputFile, $outputFile) {
-//    $data = array();
-//    if (($handle = fopen($inputFile, "r")) !== FALSE) {
-//        while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
-//            $data[] = $row;
-//        }
-//        fclose($handle);
-//    }
-//    file_put_contents($outputFile, json_encode($data, JSON_PRETTY_PRINT));
-//    echo "CSV to JSON conversion completed. Output saved as $outputFile\n";
-//}
-
-// Convert CSV to JSON
 function csvJson($inputFile, $outputFile) {
     $csvFile = fopen($inputFile, 'r');
     $headers = fgetcsv($csvFile);
@@ -38,7 +25,7 @@ function csvXml($inputFile, $outputFile) {
         while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
             $item = $xml->addChild('item');
             foreach ($row as $key => $value) {
-                $item->addChild($key, $value);
+                $item->$key = $value;
             }
         }
         fclose($handle);
