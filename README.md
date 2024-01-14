@@ -59,5 +59,5 @@ After that, open `http://localhost:3002` in your browser.
 
 --> Uses xml output too 
 
---> Remove react-responive-carousel as it has bugs 🐛
+--> Uninstall react-responive-carousel, as it has bugs 🐛
 
