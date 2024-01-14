@@ -39,3 +39,9 @@ cd into `priv_project/client`
 ```npm start```
 
 After that, open `http://localhost:3002` in your browser.
+
+
+## Future features
+-- Filterable by both discount percentage and name at the same time
+-- Still displays rest of the hotels when filtered by name 
+
