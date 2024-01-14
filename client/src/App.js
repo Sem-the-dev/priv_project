@@ -17,25 +17,26 @@ function App() {
           return response.json();
         })
         .then((data) => {
-          console.log(data);
           setItemData(data.data);
           setAllItemData(data.data)
               });
   }, []);
 
-    const handleChange = (event) => {
+    const handleDiscountDropdownChange = (event) => {
         const selectedDiscount = event.target.value;
+        setDropdownValue(selectedDiscount)
         setDiscount(selectedDiscount)
 
         if (selectedDiscount === 'all') {
             setItemData(allItemData)
         } else {
+
             const filteredItems = allItemData.filter(item => item.discount_percentage === selectedDiscount);
             setItemData(filteredItems);
         }
     }
 
-    const handleDropdownChange = (event) => {
+    const handleHotelDropdownChange = (event) => {
         const selectedHotel = event.target.value;
         setDropdownValue(selectedHotel)
 
@@ -70,29 +71,17 @@ function App() {
               <br/>
               {filter === 'discount' ? (
               <div>
-                  <label>
-                      <input type="radio" value="all" defaultChecked={true} checked={discount === 'all'} onChange={handleChange} />
-                      All
-                  </label>
-                  <label >
-                      <input type="radio" value="10" checked={discount === '10' } onChange={handleChange} />
-                      10%
-                  </label>
-
-                  <label >
-                      <input type="radio" value="15" checked={discount === '15'} onChange={handleChange} />
-                      15%
-                  </label>
-
-                  <label >
-                      <input type="radio" value="20" checked={discount === '20'} onChange={handleChange} />
-                      20%
-                  </label>
+                  <select value={dropdownValue} onChange={handleDiscountDropdownChange} >
+                      <option defaultValue='all'>All</option>
+                      {[...new Set(allItemData.map(item => item.discount_percentage))].map(discount => (
+                          <option key={discount} value={discount} name={discount}>{discount}</option>
+                      ))}
+                  </select>
               </div>
               ) : (
               <div>
                   <br/>
-                  <select value={dropdownValue} onChange={handleDropdownChange} >
+                  <select value={dropdownValue} onChange={handleHotelDropdownChange} >
                       <option defaultValue='All'>All</option>
                       {allItemData.map((item) => (
                           <option key={item.id} value={item.name} name={item.name}>{item.name}</option>
