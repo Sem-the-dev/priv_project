@@ -58,7 +58,6 @@ return function (App $app) {
             if (is_numeric($param)) {
                 $filteredHotels = array_filter($data, function ($hotel) use ($param) {
                     return $hotel['discount_percentage'] == $param;
-                    $foundHotel = array($filteredHotels);
                 });
                 $response->getBody()->write(json_encode([
                     'success' => true,
