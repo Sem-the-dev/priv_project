@@ -6,7 +6,6 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 function App() {
   const [itemData, setItemData] = useState([]);
   const [allItemData, setAllItemData] = useState([]);
-  const [discount, setDiscount] = useState(null)
   const [dropdownValue, setDropdownValue] = useState([])
   const [filter, setFilter] = useState();
 
@@ -25,7 +24,6 @@ function App() {
     const handleDiscountDropdownChange = (event) => {
         const selectedDiscount = event.target.value;
         setDropdownValue(selectedDiscount)
-        setDiscount(selectedDiscount)
 
         if (selectedDiscount === 'all') {
             setItemData(allItemData)
@@ -74,7 +72,7 @@ function App() {
                   <select value={dropdownValue} onChange={handleDiscountDropdownChange} >
                       <option defaultValue='all'>All</option>
                       {[...new Set(allItemData.map(item => item.discount_percentage))].map(discount => (
-                          <option key={discount} value={discount} name={discount}>{discount}</option>
+                          <option key={discount} value={discount} >{discount}</option>
                       ))}
                   </select>
               </div>
@@ -84,7 +82,7 @@ function App() {
                   <select value={dropdownValue} onChange={handleHotelDropdownChange} >
                       <option defaultValue='All'>All</option>
                       {allItemData.map((item) => (
-                          <option key={item.id} value={item.name} name={item.name}>{item.name}</option>
+                          <option key={item.id} value={item.name} >{item.name}</option>
                       ))}
                   </select>
               </div>
