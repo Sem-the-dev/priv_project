@@ -39,7 +39,7 @@ return function (App $app) {
         }
     });
 
-
+    // Define the filtered GET /data/{param} route
     $app->get('/data/{param}', function ( Request $request, Response $response, array $args) {
         // JSON file path
         $jsonFilePath = __DIR__ . '/../src/output.json';
@@ -48,6 +48,7 @@ return function (App $app) {
         if (file_exists($jsonFilePath)) {
             // Read JSON file content
             $jsonData = file_get_contents($jsonFilePath);
+            $jsonData = rtrim($jsonData);
 
             // Decode JSON data
             $data = json_decode($jsonData, true);

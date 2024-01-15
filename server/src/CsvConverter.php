@@ -12,6 +12,7 @@ function csvJson($inputFile, $outputFile) {
     fclose($csvFile);
 
     $json = json_encode($data, JSON_PRETTY_PRINT);
+    $json = rtrim($json);
 
     $outputFile = 'output.json';
     file_put_contents($outputFile, $json);
@@ -25,7 +26,7 @@ function csvXml($inputFile, $outputFile) {
         while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
             $item = $xml->addChild('item');
             foreach ($row as $key => $value) {
-                $item->$key = $value;
+                $item->$key =$value;
             }
         }
         fclose($handle);
