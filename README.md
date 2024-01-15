@@ -1,9 +1,9 @@
-# Privilee exercise 🏊🏋️‍♀️
+# Privilee challenge 🏊🏋️‍♀️
 
 ## Backend
 Built using PHP and Slim framework as it is lightweight 
 
-### Installation 
+### Installation git s
 PHP version 8.3.1 
 
 Composer version 2.6.6
@@ -58,7 +58,7 @@ cd into `priv_project/client`
 
 Open `http://localhost:3002` in your browser.
 
-## Future features 
+## Future improvements 
 --> Filterable by both discount percentage and name at the same time
 
 --> Still displays rest of the hotels when filtered by name 
