@@ -1,4 +1,4 @@
-# Privilee exercise 🏊🏋️‍♀️
+# Privilee challenge 🏊🏋️‍♀️
 
 ## Backend
 Built using PHP and Slim framework as it is lightweight 
@@ -22,7 +22,7 @@ Open `http://localhost:8080` in your browser.
 ### Endpoints
 http://localhost:8080/data
 
-http://localhost:8080/data/{hotel}
+http://localhost:8080/data/{name}
 
 Example:
 ![img.png](img.png)
@@ -58,14 +58,14 @@ cd into `priv_project/client`
 
 Open `http://localhost:3002` in your browser.
 
-## Future features 
+## Future improvements 🚀
 --> Filterable by both discount percentage and name at the same time
 
 --> Still displays rest of the hotels when filtered by name 
 
---> Filterable using api endpoints
+--> Filterable using api endpoints in the client
 
---> Uses xml output too 
+--> Filter using xml output too 
 
---> Uninstall react-responive-carousel, as it has bugs 🐛,  with more time I would create my own carousel
+--> Uninstall react-responive-carousel, as it has bugs 🐛,  with more time I would build my own carousel
 
