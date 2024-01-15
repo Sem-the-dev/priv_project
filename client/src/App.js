@@ -7,7 +7,7 @@ function App() {
   const [itemData, setItemData] = useState([]);
   const [allItemData, setAllItemData] = useState([]);
   const [dropdownValue, setDropdownValue] = useState([])
-  const [filter, setFilter] = useState();
+  const [filter, setFilter] = useState('name');
 
 
     useEffect(() => {

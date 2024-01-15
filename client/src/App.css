@@ -11,11 +11,15 @@
 .App-header {
   background-color: #282c34;
   width:100%;
-  height:100vh;
+  height:100%;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+@media (max-width: 640px) {
+  .App-header {
+    height: 100vh;
+  }
+}
 .App-link {
   color: #61dafb;
 }
