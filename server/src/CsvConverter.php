@@ -21,17 +21,32 @@ function csvJson($inputFile, $outputFile) {
 
 // Convert CSV to XML
 function csvXml($inputFile, $outputFile) {
-    $xml = new SimpleXMLElement('<data></data>');
-    if (($handle = fopen($inputFile, "r")) !== FALSE) {
-        while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
-            $item = $xml->addChild('item');
-            foreach ($row as $key => $value) {
-                $item->$key =$value;
-            }
+    $csvFile = fopen($inputFile, 'r');
+    $headers = fgetcsv($csvFile);
+
+    // Create a new dom document with pretty formatting
+    $xml = new DomDocument();
+    $xml->formatOutput = true;
+
+    // Add a root node to the document
+    $root = $xml->createElement('rows');
+    $root = $xml->appendChild($root);
+
+    while (($row = fgetcsv($csvFile)) !== FALSE)
+    {
+        $container = $xml->createElement('row');
+        foreach($headers as $i => $header)
+        {
+            $child = $xml->createElement(trim($header));
+            $child = $container->appendChild($child);
+            $value = $xml->createTextNode($row[$i]);
+            $value = $child->appendChild($value);
         }
-        fclose($handle);
+
+        $root->appendChild($container);
     }
-    file_put_contents($outputFile, $xml->asXML());
+
+    $xml->save($outputFile);
     echo "CSV converted to XML and saved as $outputFile\n";
 }
 
