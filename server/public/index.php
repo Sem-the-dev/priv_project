@@ -14,6 +14,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 
 require __DIR__ . '/../vendor/autoload.php';
+require_once '../app/routes.php';
 
 // Instantiate PHP-DI ContainerBuilder
 $containerBuilder = new ContainerBuilder();
@@ -83,3 +84,5 @@ $errorMiddleware->setDefaultErrorHandler($errorHandler);
 $response = $app->handle($request);
 $responseEmitter = new ResponseEmitter();
 $responseEmitter->emit($response);
+
+$app->run();
