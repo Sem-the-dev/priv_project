@@ -18,7 +18,8 @@ function App() {
             .then((data) => {
                 setItemData(data.data);
                 setAllItemData(data.data)
-            });
+            })
+            .catch((error) => console.log(error));
     }, []);
 
     const handleDiscountDropdownChange = (event) => {
